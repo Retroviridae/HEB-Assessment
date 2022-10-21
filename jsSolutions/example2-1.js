@@ -15,7 +15,7 @@ let exampleTwo = (inputString) =>{
         };
     }
     console.log(inputString);
-    console.log("New String: " + outputString);
+    console.log("New String: " + outputString + repeatedCharacters);
     console.log("Repeated characters: " + repeatedCharacters)
     console.log("")
 };
@@ -28,4 +28,3 @@ let exampleTwo = (inputString) =>{
 exampleTwo(input1);
 exampleTwo(input2);
 exampleTwo(input3);
-
