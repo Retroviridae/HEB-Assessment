@@ -5,19 +5,20 @@ let input3 = "This is my third test case";
 
 let exampleTwo = (inputString) =>{
     let outputString = "";
-    let repeatedCharacters= "";
+    let duplciateCharacters= "";
     for(let i = 0; i < inputString.length; i++){
         if(outputString.includes(inputString[i])){
-            repeatedCharacters = repeatedCharacters.concat(inputString[i])
+            duplciateCharacters = duplciateCharacters.concat(inputString[i])
             
         }else{
             outputString = outputString.concat(inputString[i])
         };
     }
-    console.log(inputString);
-    console.log("New String: " + outputString + repeatedCharacters);
-    console.log("Repeated characters: " + repeatedCharacters)
-    console.log("")
+    console.log("Input string: " + inputString);
+    console.log("Original characters: " + outputString);
+    console.log("Duplciate characters: " + duplciateCharacters)
+    console.log("New String: " + outputString + duplciateCharacters);
+    console.log("");
 };
 
 // Time complexity: O(n), space: O(n). 
