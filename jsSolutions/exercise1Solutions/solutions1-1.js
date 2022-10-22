@@ -21,7 +21,7 @@ async function crawlHEB(url){
 
     console.log({hrefText});
 
-    browser.close
+    browser.close;
 
 }
 
