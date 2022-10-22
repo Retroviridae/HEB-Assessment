@@ -5,10 +5,10 @@ let input3 = "This is my third test case";
 
 let exampleTwo = (inputString) =>{
     let outputString = "";
-    let duplicateCharacters= "";
+    let leftoverCharacters= "";
     for(let i = 0; i < inputString.length; i++){
         if(outputString.includes(inputString[i])){
-            duplicateCharacters = duplicateCharacters.concat(inputString[i])
+            leftoverCharacters = leftoverCharacters.concat(inputString[i])
             
         }else{
             outputString = outputString.concat(inputString[i])
@@ -16,8 +16,8 @@ let exampleTwo = (inputString) =>{
     }
     console.log("Input string: " + inputString);
     console.log("Original characters: " + outputString);
-    console.log("duplicate characters: " + duplicateCharacters)
-    console.log("New String: " + outputString + duplicateCharacters);
+    console.log("Leftover characters: " + leftoverCharacters)
+    console.log("New String: " + outputString + leftoverCharacters);
     console.log("");
 };
 
@@ -34,11 +34,11 @@ exampleTwo(input3);
 
 let commentedExampleTwo = (inputString) =>{
     let outputString = "";
-    let duplicateCharacters= "";
+    let leftoverCharacters= "";
     for(let i = 0; i < inputString.length; i++){
         // Check if character has been seen before
         if(outputString.includes(inputString[i])){
-            duplicateCharacters = duplicateCharacters.concat(inputString[i])
+            leftoverCharacters = leftoverCharacters.concat(inputString[i])
             
         }else{
             outputString = outputString.concat(inputString[i])
@@ -48,10 +48,10 @@ let commentedExampleTwo = (inputString) =>{
     console.log("Input string: " + inputString);
     // A list of the first instance of a character
     console.log("Original characters: " + outputString);
-    // List of characters that are duplicates
-    console.log("duplicate characters: " + duplicateCharacters)
+    // List of characters that are leftovers
+    console.log("Leftover characters: " + leftoverCharacters)
     // Output string
-    console.log("New String: " + outputString + duplicateCharacters);
+    console.log("New String: " + outputString + leftoverCharacters);
     // Empty line for console formatting
     console.log("");
 };

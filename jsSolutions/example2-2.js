@@ -2,27 +2,27 @@ let input1 = "The quick brown fox jumped over the lazy dog";
 let input2 = "Hello World";
 let input3 = "This is my third test case";
 
-
 let exampleTwo = (inputString) =>{
     let outputString = "";
-    let duplicateCharacters= "";
+    let leftoverCharacters= "";
     let characterCount = {};
     for(let i = 0; i < inputString.length; i++){
         if(characterCount[inputString[i]] === undefined){
             characterCount[inputString[i]] = 1;
             outputString = outputString.concat(inputString[i]);
         }else{
-            duplicateCharacters = duplicateCharacters.concat(inputString[i]);
+            leftoverCharacters = leftoverCharacters.concat(inputString[i]);
             characterCount[inputString[i]]++;
         };
     }
     console.log("Input string: " + inputString);
     console.log("Original characters: " + outputString);
-    console.log("duplicate characters: " + duplicateCharacters)
-    console.log("New String: " + outputString + duplicateCharacters);
+    console.log("Leftover characters: " + leftoverCharacters)
+    console.log("New String: " + outputString + leftoverCharacters);
     // console.log(characterCount);
     console.log("");
 };
+
 
 // Time complexity: O(n), space: O(n). 
 // Need to iterate over entire input so n time
@@ -37,21 +37,28 @@ exampleTwo(input3);
 
 let commentedExampleTwo = (inputString) =>{
     let outputString = "";
-    let duplicateCharacters= "";
+    let leftoverCharacters= "";
+    // Frequency counter hash map
     let characterCount = {};
     for(let i = 0; i < inputString.length; i++){
+        // Check if character is in the hash
         if(characterCount[inputString[i]] === undefined){
-            characterCount[inputString[i]] = 1;
+            // Add original character to output
             outputString = outputString.concat(inputString[i]);
+            // Add character as key to the hash
+            characterCount[inputString[i]] = 1;
         }else{
-            duplicateCharacters = duplicateCharacters.concat(inputString[i]);
+            // If seen before add to duplciate list
+            leftoverCharacters = leftoverCharacters.concat(inputString[i]);
+            // Increment counter
             characterCount[inputString[i]]++;
         };
     }
     console.log("Input string: " + inputString);
     console.log("Original characters: " + outputString);
-    console.log("duplicate characters: " + duplicateCharacters)
-    console.log("New String: " + duplicateCharacters + outputString);
+    console.log("Leftover characters: " + leftoverCharacters)
+    console.log("New String: " + outputString + leftoverCharacters);
+    // Character count is the frequency counter hash map
     // console.log(characterCount);
     console.log("");
 };
