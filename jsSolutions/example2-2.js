@@ -5,23 +5,21 @@ let input3 = "This is my third test case";
 
 let exampleTwo = (inputString) =>{
     let outputString = "";
-    let duplciateCharacters= "";
+    let duplicateCharacters= "";
     let characterCount = {};
     for(let i = 0; i < inputString.length; i++){
         if(characterCount[inputString[i]] === undefined){
             characterCount[inputString[i]] = 1;
-
-            duplciateCharacters = duplciateCharacters.concat(inputString[i]);
-            
-        }else{
             outputString = outputString.concat(inputString[i]);
+        }else{
+            duplicateCharacters = duplicateCharacters.concat(inputString[i]);
             characterCount[inputString[i]]++;
         };
     }
     console.log("Input string: " + inputString);
     console.log("Original characters: " + outputString);
-    console.log("Duplciate characters: " + duplciateCharacters)
-    console.log("New String: " + duplciateCharacters + outputString);
+    console.log("duplicate characters: " + duplicateCharacters)
+    console.log("New String: " + outputString + duplicateCharacters);
     // console.log(characterCount);
     console.log("");
 };
@@ -36,3 +34,24 @@ let exampleTwo = (inputString) =>{
 exampleTwo(input1);
 exampleTwo(input2);
 exampleTwo(input3);
+
+let commentedExampleTwo = (inputString) =>{
+    let outputString = "";
+    let duplicateCharacters= "";
+    let characterCount = {};
+    for(let i = 0; i < inputString.length; i++){
+        if(characterCount[inputString[i]] === undefined){
+            characterCount[inputString[i]] = 1;
+            outputString = outputString.concat(inputString[i]);
+        }else{
+            duplicateCharacters = duplicateCharacters.concat(inputString[i]);
+            characterCount[inputString[i]]++;
+        };
+    }
+    console.log("Input string: " + inputString);
+    console.log("Original characters: " + outputString);
+    console.log("duplicate characters: " + duplicateCharacters)
+    console.log("New String: " + duplicateCharacters + outputString);
+    // console.log(characterCount);
+    console.log("");
+};
