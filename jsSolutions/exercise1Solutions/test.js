@@ -14,16 +14,23 @@ async function crawlHEB(url){
    })
     const page = await browser.newPage();
     await page.goto(url);
+    let result = {};
 
-    const [el] = await page.$x('//*[@id="root"]/header/div[2]/div/nav/ul/li[1]/a');
-    const href = await el.getProperty('href');
-    const hrefText = await href.jsonValue();
+    for (let i = 1; i < 6; i++){
+        const [el] = await page.$x(`//*[@id="root"]/header/div[2]/div/nav/ul/li[${i}]/a`);
+        const href = await el.getProperty('href');
+        const hrefText = await href.jsonValue();
+        result[i] = hrefText;
+    }
 
-    console.log({hrefText});
 
-    browser.close;
+    console.log(result);
+
+    browser.close();
 
 }
+
+//*[@id="root"]/header/div[2]/div/nav/ul/li[6]/a
 
 crawlHEB("https://www.heb.com/")
 
