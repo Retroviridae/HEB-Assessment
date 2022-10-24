@@ -29,4 +29,7 @@ I looked up incapsula and it's cyber security company so yeah. Per their wiki "I
 
 10/23/22 12:22 AM: I texted my friend Ryan and he said he's used the puppeteer extra solution in the past like I was trying with the stealth.js file. Unfortunately there's some issue with running chromium from WSL so I can't use it. I'm giving up on it and going to wikipedia to build my crawler. Hopefully on the day I can scrape something from Heb.com but I'm not going to count on it. 
 
-12/23/22 01:19 AM: Finished scraping wikipedia. HEB works for the time being when I just scrape the one hardcoded URL. Not going to push my luck but technically it does exactly what I was asked to do. Demonstrated some more functionality with the wikipedia version so plan is to make Java solution to the second question. 
+10/23/22 01:19 AM: Finished scraping wikipedia. HEB works for the time being when I just scrape the one hardcoded URL. Not going to push my luck but technically it does exactly what I was asked to do. Demonstrated some more functionality with the wikipedia version so plan is to make Java solution to the second question. 
+
+10/24/22 11:08 AM: Added Java solution to the second exercise. Not that difficult, code is mostly the same as the JS code. Main difficulty is that you cannot call contains() with a character argument. Contains() only accepts a string argument. I saw a post on stack overflow to just call contains with an emplty string plus the character like this: (""+ char). Worked like a charm. Not going to try to make a Java web crawler, I spent enough time on the JS one anyway. 
+
